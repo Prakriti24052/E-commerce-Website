@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Same head as shop.html -->
+</head>
+<body>
+    <!-- Same header as shop.html -->
+
+    <main class="product-main">
+        <div class="container">
+            <div class="product-detail">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img id="mainProductImage" src="" alt="Product Image">
+                    </div>
+                    <div class="thumbnail-images">
+                        <!-- Thumbnails will be added via JS -->
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h1 id="productTitle">Product Title</h1>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="review-count">125 reviews</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price" id="productPrice">$99.99</span>
+                        <span class="original-price">$129.99</span>
+                        <span class="discount">23% off</span>
+                    </div>
+                    <div class="product-description">
+                        <p id="productDescription">Product description goes here...</p>
+                    </div>
+                    <div class="product-options">
+                        <div class="size-options">
+                            <label>Size:</label>
+                            <select id="sizeSelect">
+                                <option value="small">Small</option>
+                                <option value="medium" selected>Medium</option>
+                                <option value="large">Large</option>
+                            </select>
+                        </div>
+                        <div class="color-options">
+                            <label>Color:</label>
+                            <div class="color-selectors">
+                                <span class="color-option red selected"></span>
+                                <span class="color-option blue"></span>
+                                <span class="color-option black"></span>
+                            </div>
+                        </div>
+                        <div class="quantity-selector">
+                            <label>Quantity:</label>
+                            <div class="quantity-controls">
+                                <button class="quantity-btn minus">-</button>
+                                <input type="number" value="1" min="1" id="productQuantity">
+                                <button class="quantity-btn plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <button class="btn-add-to-cart">Add to Cart</button>
+                        <button class="btn-buy-now">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <section class="product-reviews">
+                <h2>Customer Reviews</h2>
+                <div class="reviews-container">
+                    <!-- Reviews will be loaded here -->
+                </div>
+            </section>
+
+            <section class="related-products">
+                <h2>You May Also Like</h2>
+                <div class="product-grid">
+                    <!-- Related products will be loaded here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Same footer as shop.html -->
+
+    <script src="js/ecommerce.js"></script>
+</body>
+</html>
