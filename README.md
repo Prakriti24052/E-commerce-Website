@@ -1,3 +1,19 @@
+# 🛒 E-Commerce Website
+
+A full-featured E-commerce web application built using modern web technologies. This project allows users to browse products, add them to a cart, and place orders — with an intuitive user interface and smooth functionality.
+
+## 📌 Features
+
+- User authentication (Sign up / Login)
+- Product catalog with category filters
+- Product details page
+- Add to cart and remove from cart
+- Checkout functionality
+- Responsive UI for mobile and desktop
+- Admin dashboard 
+
+## 🧑‍💻 Tech Stack
+
 ### 🌐 Frontend
 - HTML5, CSS3, JavaScript
 
