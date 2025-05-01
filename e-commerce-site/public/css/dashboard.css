@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    padding-bottom: 60px;
+  }
+  
+  .navbar {
+    background-color: #222;
+    padding: 10px 0;
+  }
+  
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  .navbar ul li {
+    margin: 0 20px;
+  }
+  
+  .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .navbar ul li a.active,
+  .navbar ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .dashboard-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
+  
+  .dashboard-container h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #444;
+  }
+  
+  .card {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+  
+  .card h2 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+  
+  .card p {
+    margin: 8px 0;
+  }
+  
+  .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #2980b9;
+  }
+  
+  .logout-card {
+    text-align: center;
+  }
+  
+  .logout-btn {
+    background-color: #e74c3c;
+  }
+  
+  .logout-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  

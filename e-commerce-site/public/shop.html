@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop - ShopEasy</title>
+  <link rel="stylesheet" href="./css/ecommerce.css">
+  <link rel="stylesheet" href="./css/shop.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo"><a href="#">ShopEasy</a></div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> 1</a></li>
+      <li><a href="#">Login</a></li>
+    </ul>
+  </header>
+
+  <!-- Main Container -->
+  <div class="container">
+    <div class="shop-layout">
+      
+      <!-- Sidebar -->
+      <aside>
+        <h3>Categories</h3>
+        <ul>
+          <li class="active">All Products</li>
+          <li>Electronics</li>
+          <li>Clothing</li>
+          <li>Home & Garden</li>
+          <li>Books</li>
+        </ul>
+
+        <h4>Price Range</h4>
+        <input type="range" min="0" max="1000" value="1000">
+        <p>Max Price: <strong>$1000</strong></p>
+
+        <h4>Sort By</h4>
+        <select>
+          <option>Default</option>
+          <option>Name: A-Z</option>
+          <option>Name: Z-A</option>
+          <option>Price: Low to High</option>
+          <option>Price: High to Low</option>
+        </select>
+      </aside>
+
+      <!-- Main Content -->
+      <main>
+        <div id="controls">
+          <input type="text" placeholder="Search products...">
+          <select>
+            <option>Name: A-Z</option>
+            <option>Name: Z-A</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+          </select>
+        </div>
+
+        <h2>Our Products</h2>
+        <div class="product-grid">
+          <div class="product-card">
+            <img src="smartphone.jpg" alt="Smartphone">
+            <h4>Smartphone</h4>
+            <p>$500</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <img src="laptop.jpg" alt="Laptop">
+            <h4>Laptop</h4>
+            <p>$850</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <img src="nike.jpg" alt="Nike Sportswear">
+            <h4>Nike Sportswear</h4>
+            <p>$60</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+
+          <div class="product-card">
+            <img src="hose.jpg" alt="Garden Hose">
+            <h4>Garden Hose</h4>
+            <p>$25</p>
+            <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div id="pagination">
+          <button disabled>Previous</button>
+          <span>Page 1 of 2</span>
+          <button>Next</button>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <h4>ShopEasy</h4>
+      <p>Your one-stop shop for all your needs</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <p>Home<br>Shop<br>Dashboard</p>
+    </div>
+    <div>
+      <h4>Contact Us</h4>
+      <p>Email: info@shopeasy.com<br>Phone: +1 (123) 456-7890</p>
+    </div>
+  </footer>
+  <script src="js/shop.js" defer></script>
+
+</body>
+</html>

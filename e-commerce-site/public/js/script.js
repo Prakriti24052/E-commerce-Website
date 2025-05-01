@@ -73,9 +73,9 @@ loginForm.addEventListener('submit', async (e) => {
         
         if (response.ok) {
             showMessage(data.message, 'success');
-            // Redirect to dashboard or home page after successful login
+            // Redirect to home or home page after successful login
             setTimeout(() => {
-                window.location.href = '/dashboard';
+                window.location.href = '/home.html';
             }, 1500);
         } else {
             showMessage(data.error, 'error');

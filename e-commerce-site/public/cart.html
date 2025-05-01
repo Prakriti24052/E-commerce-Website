@@ -1,57 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Same head as shop.html -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopEasy - Your Cart</title>
+  <link rel="stylesheet" href="css/ecommerce.css"/>
+  <link rel="stylesheet" href="css/cart.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
 </head>
 <body>
-    <!-- Same header as shop.html -->
+  <!-- Header -->
+  <header>
+    <div class="logo"><h1>ShopEasy</h1></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="cart.html" class="active"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a></li>
+        <li><a href="#" id="login-btn">Login</a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu"><i class="fas fa-bars"></i></div>
+  </header>
 
-    <main class="cart-main">
-        <div class="container">
-            <h1>Your Shopping Cart</h1>
-            <div class="cart-container">
-                <div class="cart-items">
-                    <div class="cart-empty" id="cartEmpty">
-                        <i class="fas fa-shopping-cart"></i>
-                        <h2>Your cart is empty</h2>
-                        <p>Browse our products and add items to your cart</p>
-                        <a href="shop.html" class="btn-shop">Continue Shopping</a>
-                    </div>
-                    <div class="cart-items-list" id="cartItemsList">
-                        <!-- Cart items will be loaded here -->
-                    </div>
-                </div>
-                <div class="cart-summary">
-                    <h2>Order Summary</h2>
-                    <div class="summary-details">
-                        <div class="summary-row">
-                            <span>Subtotal</span>
-                            <span id="cartSubtotal">$0.00</span>
-                        </div>
-                        <div class="summary-row">
-                            <span>Shipping</span>
-                            <span id="cartShipping">$5.99</span>
-                        </div>
-                        <div class="summary-row">
-                            <span>Tax</span>
-                            <span id="cartTax">$0.00</span>
-                        </div>
-                        <div class="summary-row total">
-                            <span>Total</span>
-                            <span id="cartTotal">$5.99</span>
-                        </div>
-                    </div>
-                    <button class="btn-checkout" id="checkoutBtn">Proceed to Checkout</button>
-                    <p class="secure-checkout">
-                        <i class="fas fa-lock"></i> Secure checkout
-                    </p>
-                </div>
+  <!-- Main -->
+  <main>
+    <section class="cart-section">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a> &gt; <span>Shopping Cart</span>
+      </nav>
+
+      <h1>Your Shopping Cart</h1>
+
+      <div class="cart-container">
+        <!-- Cart Items -->
+        <div class="cart-items">
+          <div class="cart-header">
+            <div>Product</div>
+            <div>Price</div>
+            <div>Quantity</div>
+            <div>Subtotal</div>
+            <div></div>
+          </div>
+
+          <!-- Item 1 -->
+          <div class="cart-item" data-id="1">
+            <div class="item-product">
+              <img src="https://via.placeholder.com/80x80" alt="Product 1"/>
+              <div class="product-details">
+                <h3>Product Name 1</h3>
+                <p>Color: Red | Size: M</p>
+              </div>
             </div>
+            <div class="item-price">$49.99</div>
+            <div class="item-quantity">
+              <div class="quantity-selector">
+                <button class="quantity-btn minus" aria-label="Decrease quantity">-</button>
+                <input type="number" value="1" min="1" max="10" aria-label="Quantity"/>
+                <button class="quantity-btn plus" aria-label="Increase quantity">+</button>
+              </div>
+            </div>
+            <div class="item-subtotal">$49.99</div>
+            <div class="item-remove">
+              <button class="remove-btn" aria-label="Remove item"><i class="fas fa-trash"></i></button>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="cart-item" data-id="2">
+            <div class="item-product">
+              <img src="https://via.placeholder.com/80x80" alt="Product 2"/>
+              <div class="product-details">
+                <h3>Product Name 2</h3>
+                <p>Color: Blue | Size: L</p>
+              </div>
+            </div>
+            <div class="item-price">$29.99</div>
+            <div class="item-quantity">
+              <div class="quantity-selector">
+                <button class="quantity-btn minus" aria-label="Decrease quantity">-</button>
+                <input type="number" value="2" min="1" max="10" aria-label="Quantity"/>
+                <button class="quantity-btn plus" aria-label="Increase quantity">+</button>
+              </div>
+            </div>
+            <div class="item-subtotal">$59.98</div>
+            <div class="item-remove">
+              <button class="remove-btn" aria-label="Remove item"><i class="fas fa-trash"></i></button>
+            </div>
+          </div>
+
+          <!-- Cart Actions -->
+          <div class="cart-actions">
+            <button class="btn btn-outline continue-shopping">Continue Shopping</button>
+            <button class="btn btn-outline update-cart">Update Cart</button>
+          </div>
         </div>
-    </main>
 
-    <!-- Same footer as shop.html -->
+        <!-- Cart Summary -->
+        <aside class="cart-summary" aria-label="Cart Summary">
+          <h3>Cart Summary</h3>
+          <div class="summary-details">
+            <div class="summary-row"><span>Subtotal</span><span id="summary-subtotal">$109.97</span></div>
+            <div class="summary-row"><span>Shipping</span><span>$5.99</span></div>
+            <div class="summary-row"><span>Tax</span><span>$8.25</span></div>
+            <div class="summary-row total"><span>Total</span><span id="summary-total">$124.21</span></div>
+          </div>
+          <div class="coupon-code">
+            <input type="text" placeholder="Enter coupon code" aria-label="Coupon code"/>
+            <button class="btn btn-outline">Apply</button>
+          </div>
+          <button class="btn checkout-btn">Proceed to Checkout</button>
+          <div class="payment-methods">
+            <img src="https://via.placeholder.com/50x30" alt="Visa"/>
+            <img src="https://via.placeholder.com/50x30" alt="Mastercard"/>
+            <img src="https://via.placeholder.com/50x30" alt="PayPal"/>
+            <img src="https://via.placeholder.com/50x30" alt="Apple Pay"/>
+          </div>
+        </aside>
+      </div>
 
-    <script src="js/ecommerce.js"></script>
+      <!-- Cross-sell -->
+      <section class="cross-sell" aria-label="You May Also Like">
+        <h3>You May Also Like</h3>
+        <div class="products-grid" id="cross-sell-products">
+          <!-- Products will be loaded by JS -->
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>ShopEasy</h3>
+        <p>Your one-stop shop for all your needs</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="cart.html">Cart</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: info@shopeasy.com</p>
+        <p>Phone: +1 (123) 456-7890</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 ShopEasy. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Login Modal -->
+  <div class="modal" id="login-modal" role="dialog" aria-modal="true" hidden>
+    <div class="modal-content">
+      <span class="close-modal" aria-label="Close login modal">&times;</span>
+      <h2>Login</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required/>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" required/>
+        </div>
+        <button type="submit" class="btn">Login</button>
+      </form>
+      <p>Don't have an account? <a href="#" id="show-register">Register</a></p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+  <script src="js/cart.js"></script>
 </body>
 </html>

@@ -1,179 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ShopEase - Online Store</title>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/ecommerce.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="./css/ecommerce.css" />
+  <link rel="stylesheet" href="./css/dashboard.css" />
 </head>
 <body>
-    <header class="main-header">
-        <div class="container">
-            <div class="logo">
-                <i class="fas fa-shopping-bag"></i>
-                <h1>ShopEase</h1>
-            </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Search products...">
-                <button><i class="fas fa-search"></i></button>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="shop.html">Home</a></li>
-                    <li><a href="#">Categories</a></li>
-                    <li><a href="#">Deals</a></li>
-                    <li><a href="dashboard.html">Account</a></li>
-                    <li>
-                        <a href="cart.html" class="cart-icon">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span class="cart-count">0</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="dashboard.html" class="active">Dashboard</a></li>
+        <li><a href="orders.html">Orders</a></li>
+        <li><a href="wishlist.html">Wishlist</a></li>
+        <li><a href="address.html">Address</a></li>
+        <li><a href="logout.html" id="logout">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main class="shop-main">
-        <div class="container">
-            <section class="hero">
-                <div class="hero-content">
-                    <h2>Summer Sale!</h2>
-                    <p>Up to 50% off on selected items</p>
-                    <button class="btn-shop">Shop Now</button>
-                </div>
-            </section>
+  <main class="dashboard-container">
+    <h1>Welcome, <span id="username">John Doe</span></h1>
 
-            <section class="categories">
-                <h2>Shop by Category</h2>
-                <div class="category-grid">
-                    <div class="category-card">
-                        <img src="images/electronics.jpg" alt="Electronics">
-                        <h3>Electronics</h3>
-                    </div>
-                    <div class="category-card">
-                        <img src="images/clothing.jpg" alt="Clothing">
-                        <h3>Clothing</h3>
-                    </div>
-                    <div class="category-card">
-                        <img src="images/home.jpg" alt="Home & Kitchen">
-                        <h3>Home & Kitchen</h3>
-                    </div>
-                    <div class="category-card">
-                        <img src="images/books.jpg" alt="Books">
-                        <h3>Books</h3>
-                    </div>
-                </div>
-            </section>
+    <!-- Account Details -->
+    <div class="card">
+      <h2>Account Details</h2>
+      <p><strong>Name:</strong> John Doe</p>
+      <p><strong>Email:</strong> johndoe@example.com</p>
+      <p><strong>Phone:</strong> +123456789</p>
+    </div>
 
-            <section class="featured-products">
-                <h2>Featured Products</h2>
-                <div class="product-grid" id="productGrid">
-                    <!-- Products will be loaded here via JavaScript -->
-                </div>
-            </section>
-        </div>
-    </main>
+    <!-- Orders -->
+    <div class="card">
+      <h2>Your Orders</h2>
+      <p>See your past and current orders.</p>
+      <a href="orders.html" class="btn">View Orders</a>
+    </div>
 
-    <footer class="main-footer">
-        <div class="container">
-            <div class="footer-section">
-                <h3>ShopEase</h3>
-                <p>Your one-stop shop for all your needs</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>Email: support@shopease.com</p>
-                <p>Phone: (123) 456-7890</p>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2023 ShopEase. All rights reserved.</p>
-        </div>
-    </footer>
+    <!-- Wishlist -->
+    <div class="card">
+      <h2>Your Wishlist</h2>
+      <p>Items you saved to buy later.</p>
+      <a href="wishlist.html" class="btn">View Wishlist</a>
+    </div>
 
-    <script src="js/ecommerce.js"></script>
+    <!-- Address -->
+    <div class="card">
+      <h2>Your Address</h2>
+      <p>123 Main St, City, Country</p>
+      <a href="address.html" class="btn">Manage Address</a>
+    </div>
 
-    <main class="dashboard-main">
-        <div class="container">
-            <div class="dashboard-container">
-                <aside class="dashboard-sidebar">
-                    <div class="user-profile">
-                        <div class="user-avatar">
-                            <i class="fas fa-user-circle"></i>
-                        </div>
-                        <h3 id="userName">John Doe</h3>
-                        <p id="userEmail">john@example.com</p>
-                    </div>
-                    <nav class="dashboard-nav">
-                        <ul>
-                            <li class="active"><a href="dashboard.html"><i class="fas fa-user"></i> My Profile</a></li>
-                            <li><a href="#"><i class="fas fa-box"></i> My Orders</a></li>
-                            <li><a href="#"><i class="fas fa-heart"></i> Wishlist</a></li>
-                            <li><a href="#"><i class="fas fa-map-marker-alt"></i> Addresses</a></li>
-                            <li><a href="#"><i class="fas fa-cog"></i> Account Settings</a></li>
-                            <li><a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
-                        </ul>
-                    </nav>
-                </aside>
-                <div class="dashboard-content">
-                    <section class="dashboard-section active" id="profileSection">
-                        <h2>My Profile</h2>
-                        <div class="profile-info">
-                            <div class="info-row">
-                                <span>Full Name</span>
-                                <span id="profileName">John Doe</span>
-                            </div>
-                            <div class="info-row">
-                                <span>Email</span>
-                                <span id="profileEmail">john@example.com</span>
-                            </div>
-                            <div class="info-row">
-                                <span>Member Since</span>
-                                <span id="profileJoinDate">January 15, 2023</span>
-                            </div>
-                        </div>
-                    </section>
+    <!-- Logout -->
+    <div class="card logout-card">
+      <h2>Ready to go?</h2>
+      <a href="logout.html" class="btn logout-btn">Logout</a>
+    </div>
+  </main>
 
-                    <section class="dashboard-section" id="ordersSection">
-                        <h2>My Orders</h2>
-                        <div class="orders-list">
-                            <div class="order-card">
-                                <div class="order-header">
-                                    <div class="order-id">Order #12345</div>
-                                    <div class="order-date">Placed on Jan 10, 2023</div>
-                                    <div class="order-status">Delivered</div>
-                                    <div class="order-total">$129.99</div>
-                                </div>
-                                <div class="order-items">
-                                    <!-- Order items would be listed here -->
-                                </div>
-                                <div class="order-actions">
-                                    <button class="btn-view-order">View Order</button>
-                                    <button class="btn-reorder">Reorder</button>
-                                </div>
-                            </div>
-                            <!-- More order cards would be here -->
-                        </div>
-                    </section>
-                </div>
-            </div>
-        </div>
-    </main>
+  <footer>
+    <p>&copy; 2025 Your Store</p>
+  </footer>
 
-    <!-- Same footer as shop.html -->
-
-    <script src="js/ecommerce.js"></script>
+  <script src="./js/dashboard.js"></script> 
 </body>
 </html>
