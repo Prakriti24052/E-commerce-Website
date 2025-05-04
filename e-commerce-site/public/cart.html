@@ -4,25 +4,31 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ShopEasy - Your Cart</title>
-  <link rel="stylesheet" href="css/ecommerce.css"/>
-  <link rel="stylesheet" href="css/cart.css"/>
+  <link rel="stylesheet" href="./css/ecommerce.css"/>
+  <link rel="stylesheet" href="./css/cart.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
 </head>
 <body>
   <!-- Header -->
   <header>
-    <div class="logo"><h1>ShopEasy</h1></div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
-        <li><a href="cart.html" class="active"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a></li>
-        <li><a href="#" id="login-btn">Login</a></li>
-      </ul>
-    </nav>
-    <div class="mobile-menu"><i class="fas fa-bars"></i></div>
-  </header>
+    <div class="container header-container">
+        <div class="logo">
+            <h1>ShopEasy</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a></li>
+                <li><a href="#" id="login-btn">Login</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i> <!-- Hamburger icon -->
+            </div>
+        </nav>
+    </div>
+</header>
 
   <!-- Main -->
   <main>
@@ -112,10 +118,7 @@
           </div>
           <button class="btn checkout-btn">Proceed to Checkout</button>
           <div class="payment-methods">
-            <img src="https://via.placeholder.com/50x30" alt="Visa"/>
-            <img src="https://via.placeholder.com/50x30" alt="Mastercard"/>
             <img src="https://via.placeholder.com/50x30" alt="PayPal"/>
-            <img src="https://via.placeholder.com/50x30" alt="Apple Pay"/>
           </div>
         </aside>
       </div>

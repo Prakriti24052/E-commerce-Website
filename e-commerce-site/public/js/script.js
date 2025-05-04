@@ -19,21 +19,18 @@ function closeModal(modalId) {
     document.getElementById(modalId).style.display = 'none';
 }
 
+
 // Toggle Password Visibility
 function togglePassword() {
     const passwordInput = document.getElementById('password');
     const icon = document.querySelector('.toggle-password i');
-    
-    if (passwordInput.type === 'password') {
-        passwordInput.type = 'text';
-        icon.classList.remove('fa-eye');
-        icon.classList.add('fa-eye-slash');
-    } else {
-        passwordInput.type = 'password';
-        icon.classList.remove('fa-eye-slash');
-        icon.classList.add('fa-eye');
-    }
+    const isVisible = passwordInput.type === 'text';
+    passwordInput.type = isVisible ? 'password' : 'text';
+    icon.classList.toggle('fa-eye');
+    icon.classList.toggle('fa-eye-slash');
 }
+
+
 
 // Login with Google (mock function)
 function loginWithGoogle() {
