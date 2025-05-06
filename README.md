@@ -10,7 +10,6 @@ A full-featured E-commerce web application built using modern web technologies. 
 - Add to cart and remove from cart
 - Checkout functionality
 - Responsive UI for mobile and desktop
-- Admin dashboard 
 
 ## 🧑‍💻 Tech Stack
 
